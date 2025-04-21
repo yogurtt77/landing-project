@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowLingo - Первая онлайн школа казахского языка</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- 01. Главный экран -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+          <div class="logo">
+            <img
+              src="assets/icons/logo.svg"
+              alt="FlowLingo logo"
+              class="logo-svg"
+            />
+            <span class="logo-text">FlowLingo</span>
+          </div>
+          <nav class="menu">
+            <ul>
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#advantages">Преимущества</a></li>
+              <li><a href="#gallery">Галерея</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="language">
+              <span>RU</span>
+              <img src="assets/icons/arrow-down.svg" alt="Language selector" />
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Main hero content -->
+        <div class="hero-content">
+          <h1>Первая онлайн школа казахского языка</h1>
+          <p class="hero-content-p">
+            Предоставляем уникальные и современные методы обучения, которые
+            помогут вам овладеть казахским языком с уверенностью и легкостью.
+          </p>
+          <button class="btn-primary">Записаться</button>
+          <div class="arrows">
+            <div class="arrow-left">
+              <img src="assets/icons/arrow-left.svg" alt="Previous slide" />
+            </div>
+            <div class="arrow-right">
+              <img src="assets/icons/arrow-right.svg" alt="Next slide" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. О компании -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="./assets/images/backgrounds/about-polygon1.png"
+              alt=""
+              class="img-back"
+            />
+            <img
+              src="./assets/images/backgrounds/about-polygon2.png"
+              alt=""
+              class="img-front"
+            />
+            <!-- Polygon backgrounds -->
+          </div>
+          <div class="about-text">
+            <div class="section-header-2">
+              <span class="section-label-2">О компании</span>
+              <h2>Инновационная школа казахского языка "FlowLingo"</h2>
+            </div>
+            <p>
+              Добро пожаловать в "FlowLingo" – превосходную онлайн школу,
+              специализирующуюся в изучении казахского языка.
+            </p>
+            <p>
+              Учите казахский язык с удовольствием и в удобное для вас время,
+              получайте доступ к интересным учебным материалам и интерактивным
+              заданиям, которые разработаны специально для вас. Используйте нашу
+              инновационную систему "Казахский Flow", чтобы облегчить процесс
+              запоминания и применения языковых навыков в реальных ситуациях.
+            </p>
+            <p>
+              Присоединяйтесь к "FlowLingo" сегодня и начинайте свой языковой
+              путь к успеху и культурному обогащению через изучение казахского
+              языка онлайн!
+            </p>
+            <button class="btn-primary-2">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Преимущества -->
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-label">преимущества</span>
+          <h2>Онлайн школа, открывающая новые горизонты</h2>
+        </div>
+        <div class="advantages-cards">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <img
+                src="assets/icons/Vector.svg"
+                alt="Interactive methodology"
+              />
+            </div>
+            <div class="advantage-content">
+              <h3>Интерактивная методика</h3>
+              <p>
+                Развивайте свою творческую силу и мастерство в языковых навыках
+                с помощью интерактивных методов обучения.
+              </p>
+            </div>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <img src="assets/icons/Vector2.svg" alt="Professional teachers" />
+            </div>
+            <div class="advantage-content">
+              <h3>Профессиональные педагоги</h3>
+              <p>
+                Получайте поддержку и руководство от опытных преподавателей,
+                отличающихся экспертизой в преподавании казахского языка.
+              </p>
+            </div>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <img
+                src="assets/icons/Vector3.svg"
+                alt="Feedback and evaluation"
+              />
+            </div>
+            <div class="advantage-content">
+              <h3>Обратная связь и оценка</h3>
+              <p>
+                Получайте детальную обратную связь и персонализированную оценку
+                вашего прогресса, что поможет вам продвигаться быстрее и
+                эффективнее в изучении казахского языка.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Галерея -->
+    <section class="gallery" id="gallery">
+      <div class="section-header center">
+        <span class="section-label">галерея</span>
+        <h2>Фотогалерея нашей Компании</h2>
+      </div>
+      <div class="gallery-container">
+        <!-- Добавляем левый и правый градиенты поверх контейнера -->
+        <div class="gallery-gradient gallery-gradient-left"></div>
+        <div class="gallery-gradient gallery-gradient-right"></div>
+
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1"></div>
+            <div class="swiper-slide" id="slide2"></div>
+            <div class="swiper-slide" id="slide3"></div>
+            <!-- Добавляем дублирующие слайды для лучшей загрузки в цикле -->
+            <div class="swiper-slide" id="slide1-clone"></div>
+            <div class="swiper-slide" id="slide2-clone"></div>
+            <div class="swiper-slide" id="slide3-clone"></div>
+          </div>
+        </div>
+        <div class="gallery-arrow-left">
+          <img src="assets/icons/arrow-left.svg" alt="Previous image" />
+        </div>
+        <div class="gallery-arrow-right">
+          <img src="assets/icons/arrow-right.svg" alt="Next image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Услуги -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-label">услуги</span>
+          <h2>Наши услуги для Вас</h2>
+        </div>
+        <div class="services-card">
+          <div class="card">
+            <img
+              src="assets/images/services/Rectangle 4.png"
+              alt="Online course"
+            />
+            <div class="card-text">
+              <h3>Онлайн курс казахского языка</h3>
+              <p>
+                Гибкий формат обучения, который позволит вам изучать казахский
+                язык в удобное для вас время и темпе.
+              </p>
+              <a href="#feedback" class="card-button">Записаться</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="assets/images/services/Rectangle 5.png"
+              alt="Speaking practice"
+            />
+            <div class="card-text">
+              <h3>Разговорная практика</h3>
+              <p>
+                Интерактивные занятия, направленные на развитие навыков общения
+                на казахском языке с носителями языка.
+              </p>
+              <a href="#feedback" class="card-button">Записаться</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="assets/images/services/Rectangle 6.png"
+              alt="Cultural immersion"
+            />
+            <div class="card-text">
+              <h3>Культурное погружение</h3>
+              <p>
+                Узнайте об уникальной культуре Казахстана, истории и традициях
+                через изучение казахского языка.
+              </p>
+              <a href="#feedback" class="card-button">Записаться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-label">ответы</span>
+          <h2>Часто задаваемые вопросы</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <div class="faq-question">
+              <h3>Какие форматы обучения доступны?</h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Мы предоставляем разнообразные форматы обучения, включая
+                индивидуальные занятия, групповые уроки и онлайн курсы для
+                вашего удобства.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Какие уровни языка вы предлагаете для изучения?</h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как долго длится каждый курс?</h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Какие методы обучения вы используете?</h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Могу ли я получить сертификат об окончании курса?</h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                Какие возможности для практики разговорного языка
+                предоставляются?
+              </h3>
+              <div class="faq-arrow">
+                <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. Партнеры -->
+    <section class="partners" id="partners">
+      <div class="section-header center">
+        <span class="section-label">партнеры</span>
+        <h2>Наши партнеры</h2>
+      </div>
+      <div class="partners-slider">
+        <div class="partners-track">
+          <!-- First set of logos -->
+          <div class="partner-logo">
+            <img src="assets/images/partner1.png" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner2.png" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner3.png" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner4.png" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner5.png" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner6.png" alt="Partner 6" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner7.png" alt="Partner 7" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner8.png" alt="Partner 8" />
+          </div>
+
+          <!-- Duplicate logos for seamless scrolling -->
+          <div class="partner-logo">
+            <img src="assets/images/partner1.png" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner2.png" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner3.png" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner4.png" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner5.png" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner6.png" alt="Partner 6" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner7.png" alt="Partner 7" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/images/partner8.png" alt="Partner 8" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. Отзывы -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-label">отзывы</span>
+          <h2>Отзывы клиентов</h2>
+        </div>
+      </div>
+      <div class="reviews-slider">
+        <!-- Original review cards - the clones will be added by JavaScript -->
+        <div class="review-card">
+          <div class="quote-icon">
+            <img src="assets/icons/quote.svg" alt="Quote" />
+          </div>
+          <p class="review-text">
+            Я начала изучение казахского языка с нуля и долго искала подходящую
+            школу. Очень рада, что выбрала именно эту! Преподаватели терпеливо
+            объясняют материал, и даже сложные темы становятся понятными.
+            Постепенно я стала чувствовать себя увереннее в разговоре на
+            казахском языке, и теперь с удовольствием общаюсь с местными
+            жителями
+          </p>
+          <p class="review-author">Анастасия П., 29 лет</p>
+        </div>
+        <div class="review-card">
+          <div class="quote-icon">
+            <img src="assets/icons/quote.svg" alt="Quote" />
+          </div>
+          <p class="review-text">
+            Приезжая в Казахстан на рабочие командировки, я решил освоить
+            казахский язык для улучшения деловых связей. Курсы в этой школе дали
+            мне уверенность и необходимые навыки для общения с местными
+            партнерами. Опытные преподаватели помогли мне научиться использовать
+            язык в рабочих и неформальных ситуациях
+          </p>
+          <p class="review-author">Алексей К., 34 года</p>
+        </div>
+        <div class="review-card active">
+          <div class="quote-icon">
+            <img src="assets/icons/quote.svg" alt="Quote" />
+          </div>
+          <p class="review-text">
+            Я всегда хотела изучить казахский язык, чтобы лучше понимать
+            культуру моего мужа. Занятия в этой школе превзошли мои ожидания!
+            Преподаватели внимательно относятся к каждому студенту, и занятия
+            были интересными и практичными. Теперь я горжусь своим прогрессом в
+            изучении казахского языка и могу свободно общаться с родственниками
+            мужа
+          </p>
+          <p class="review-author">Анастасия П., 29 лет</p>
+        </div>
+        <div class="review-card">
+          <div class="quote-icon">
+            <img src="assets/icons/quote.svg" alt="Quote" />
+          </div>
+          <p class="review-text">
+            Изучение казахского языка стало для меня интересным и увлекательным
+            процессом. Курс обладает отличным балансом между теорией и
+            практикой, что позволяет применять новые знания на практике. Студии
+            школы всегда были дружелюбны и поддерживающими, что создает приятную
+            атмосферу во время занятий
+          </p>
+          <p class="review-author">Дмитрий Г., 40 лет</p>
+        </div>
+        <div class="review-card">
+          <div class="quote-icon">
+            <img src="assets/icons/quote.svg" alt="Quote" />
+          </div>
+          <p class="review-text">
+            Я училась в этой школе перед переездом в Казахстан для работы.
+            Занятия помогли мне быстро освоить основы языка и легко
+            адаптироваться в новой стране. Возможность учиться онлайн была
+            идеальным решением для меня, так как я могла заниматься из любой
+            точки мира. Большое спасибо за поддержку и отличный опыт обучения
+          </p>
+          <p class="review-author">Наталья С., 26 лет</p>
+        </div>
+      </div>
+      <div class="review-arrows">
+        <div class="review-arrow-left">
+          <img src="assets/icons/arrow-right1.svg" alt="Previous review" />
+        </div>
+        <div class="review-arrow-right">
+          <img src="assets/icons/arrow-left1.svg" alt="Next review" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. Обратная связь / Форма -->
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="feedback-form">
+          <h2 class="h2-form">Записаться на курсы</h2>
+          <p>
+            Заполните форму, чтобы зарегистрироваться сейчас и начать свой
+            языковой путь!
+          </p>
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Ваше имя*" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Номер телефона*" required />
+            </div>
+            <button type="submit" class="form-button">Отправить</button>
+          </form>
+          <div class="form-agreement">
+            <div class="checkbox-wrapper">
+              <div class="checkbox"></div>
+            </div>
+            <p class="p-text">
+              Нажимая кнопку "Отправить" вы соглашаетесь предоставить ваши
+              <a href="#" class="privacy-link"
+                >персональные данные и обработку данных</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Карта -->
+    <section class="map" id="contacts">
+      <div class="map-container">
+        <!-- Map will be inserted here -->
+      </div>
+    </section>
+
+    <!-- 11. Футер -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="logo">
+              <img
+                src="assets/icons/logo.svg"
+                alt="FlowLingo logo"
+                class="logo-svg"
+              />
+              <span class="logo-text">FlowLingo</span>
+            </div>
+            <div class="footer-social">
+              <a href="#" class="social-icon">
+                <img src="assets/icons/threads.svg" alt="Facebook" />
+              </a>
+              <a href="#" class="social-icon">
+                <img src="assets/icons/twitter.svg" alt="Instagram" />
+              </a>
+              <a href="#" class="social-icon">
+                <img src="assets/icons/youtube.svg" alt="Twitter" />
+              </a>
+              <a href="#" class="social-icon">
+                <img src="assets/icons/instagram.svg" alt="LinkedIn" />
+              </a>
+              <a href="#" class="social-icon">
+                <img src="assets/icons/whatsapp.svg" alt="YouTube" />
+              </a>
+              <a href="#" class="social-icon">
+                <img src="assets/icons/facebook.svg" alt="Telegram" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-menu-column">
+              <a href="#about">О компании</a>
+              <a href="#advantages">Преимущества</a>
+              <a href="#gallery">Галерея</a>
+            </div>
+            <div class="footer-menu-column">
+              <a href="#services">Услуги</a>
+              <a href="#reviews">Отзывы</a>
+              <a href="#contacts">Контакты</a>
+            </div>
+          </div>
+          <div class="footer-contacts">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="assets/icons/phone.svg" alt="Phone" />
+              </div>
+              <span>+7 (777) 777 11 22</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="assets/icons/email.svg" alt="Email" />
+              </div>
+              <span>info@flowlingo.kz</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="assets/icons/location.svg" alt="Location" />
+              </div>
+              <span>г. Астана, ул. Достык 12/1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p>FlowLingo 2023, © Все права защищены</p>
+          <p>Разработано в Astana Creative</p>
+        </div>
+      </div>
+      <div class="fixed-button">
+        <img src="assets/icons/message.svg" alt="WhatsApp" />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
