@@ -193,6 +193,14 @@
     font-size: 20px;
   }
 
+  .form-group input {
+    font-size: 20px;
+  }
+
+  .form-button {
+    font-size: 20px;
+  }
+
   .checkbox-wrapper {
     width: 25px;
     height: 25px;
@@ -527,6 +535,20 @@
     width: 35px;
     height: 35px;
   }
+
+  .success-modal-content {
+    padding: 30px;
+    width: 85%;
+  }
+  
+  .success-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .success-message {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -606,6 +628,17 @@
     min-height: 420px;
   }
 
+  .review-card .review-text {
+    font-size: 13px;
+    line-height: 1.6;
+    overflow: auto;
+    max-height: 250px;
+  }
+
+  .review-navigation {
+    margin-top: 20px;
+  }
+
   .footer {
     padding: 30px 0;
   }
@@ -636,8 +669,38 @@
     min-height: 420px;
   }
 
-  .review-navigation {
-    margin-top: 20px;
+  .swiper-slide {
+    max-width: none;
+    margin: 0;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .review-arrow-left,
+  .review-arrow-right {
+    width: 35px;
+    height: 35px;
+  }
+
+  .success-modal-content {
+    padding: 25px 20px;
+    width: 90%;
+  }
+  
+  .success-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .close-button {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .error-message {
+    font-size: 12px;
   }
 }
 
@@ -752,6 +815,15 @@
     width: 100%;
     height: auto;
     min-height: 400px;
+  }
+
+  .review-card .review-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .review-card .review-author {
+    font-size: 12px;
   }
 
   .review-arrow-left,

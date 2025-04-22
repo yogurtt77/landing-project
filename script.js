@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Screen size detection for responsive sliders
     const isLargeScreen = window.innerWidth >= 1441;
     const isExtraLargeScreen = window.innerWidth >= 1921;
+    const isSmallScreen = window.innerWidth <= 576;
+    const isMobileScreen = window.innerWidth <= 480;
 
     // Language Dropdown Toggle
     const languageSelector = document.querySelector(".language");
@@ -276,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
       centeredSlides: true,
       loop: true,
       speed: 1000,
-      spaceBetween: isExtraLargeScreen ? 40 : isLargeScreen ? 30 : 20,
+      spaceBetween: isExtraLargeScreen ? 40 : (isLargeScreen ? 30 : 20),
       initialSlide: 1,
       loopAdditionalSlides: 9,
       effect: "slide",
@@ -304,14 +306,22 @@ document.addEventListener("DOMContentLoaded", function () {
         320: {
           slidesPerView: 1,
           spaceBetween: 5,
+          centeredSlides: true,
+        },
+        480: {
+          slidesPerView: "auto",
+          spaceBetween: 8,
+          centeredSlides: true,
         },
         576: {
           slidesPerView: "auto",
-          spaceBetween: 8,
+          spaceBetween: 10,
+          centeredSlides: true,
         },
         768: {
           slidesPerView: "auto",
           spaceBetween: 10,
+          centeredSlides: true,
         },
       },
       on: {
@@ -457,17 +467,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Reviews Slider
-    const reviewLeftArrow = document.querySelector(".review-arrow-left");
-    const reviewRightArrow = document.querySelector(".review-arrow-right");
-
-    // Initialize Swiper for Reviews
+    // Initialize Reviews Slider
     const reviewsSwiper = new Swiper(".reviews-swiper", {
       slidesPerView: "auto",
       centeredSlides: true,
       loop: true,
-      speed: 1000,
-      spaceBetween: isExtraLargeScreen ? 50 : isLargeScreen ? 40 : 30,
+      speed: 600,
+      spaceBetween: 30,
       initialSlide: 2,
       loopAdditionalSlides: 3,
       effect: "slide",
@@ -616,6 +622,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Connect custom navigation arrows for reviews
+    const reviewLeftArrow = document.querySelector(".review-arrow-left");
+    const reviewRightArrow = document.querySelector(".review-arrow-right");
+
     if (reviewLeftArrow && reviewRightArrow) {
       reviewLeftArrow.addEventListener("click", () => {
         const isFirstSlide = reviewsSwiper.isBeginning;
@@ -688,63 +697,122 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 100);
 
-    // Form Validation
-    const feedbackForm = document.querySelector(".feedback-form form");
-    const formCheckbox = document.querySelector(".checkbox");
-    const formCheckboxWrapper = document.querySelector(".checkbox-wrapper");
+    // Form validation and success modal
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const nameError = document.getElementById('name-error');
+    const phoneError = document.getElementById('phone-error');
+    const successModal = document.getElementById('successModal');
+    const closeButton = document.querySelector('.close-button');
+    const checkboxWrapper = document.querySelector('.checkbox-wrapper');
+    const checkbox = document.querySelector('.checkbox');
     let isChecked = false;
 
-    if (formCheckboxWrapper) {
-      formCheckboxWrapper.addEventListener("click", () => {
+    // Checkbox toggle
+    if (checkboxWrapper) {
+      checkboxWrapper.addEventListener('click', function() {
         isChecked = !isChecked;
-        formCheckbox.classList.toggle("checked", isChecked);
+        checkbox.classList.toggle('checked', isChecked);
+        
+        // Сбрасываем ошибку при клике
+        if (isChecked) {
+          checkboxWrapper.classList.remove('error');
+        }
       });
     }
 
-    if (feedbackForm) {
-      feedbackForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    // Form validation
+    function validateInput(input, errorElement, errorMessage) {
+      if (!input.value.trim()) {
+        input.classList.add('error');
+        input.classList.remove('valid');
+        errorElement.textContent = errorMessage;
+        errorElement.classList.add('visible');
+        return false;
+      } else {
+        input.classList.remove('error');
+        input.classList.add('valid');
+        errorElement.textContent = '';
+        errorElement.classList.remove('visible');
+        return true;
+      }
+    }
 
-        const nameInput = feedbackForm.querySelector('input[type="text"]');
-        const phoneInput = feedbackForm.querySelector('input[type="tel"]');
+    // Validate name
+    nameInput.addEventListener('blur', function() {
+      validateInput(nameInput, nameError, 'Пожалуйста, введите ваше имя');
+    });
 
-        let isValid = true;
+    // Validate phone
+    phoneInput.addEventListener('blur', function() {
+      validateInput(phoneInput, phoneError, 'Пожалуйста, введите номер телефона');
+    });
 
-        // Validate name
-        if (!nameInput.value.trim()) {
-          nameInput.style.borderColor = "#EB5757";
-          isValid = false;
-        } else {
-          nameInput.style.borderColor = "#E0E0E0";
-        }
+    // Clear errors on input
+    nameInput.addEventListener('input', function() {
+      if (nameInput.value.trim()) {
+        nameInput.classList.remove('error');
+        nameError.classList.remove('visible');
+      }
+    });
 
-        // Validate phone
-        const phonePattern =
-          /^(\+7|7|8)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/;
-        if (!phonePattern.test(phoneInput.value.trim())) {
-          phoneInput.style.borderColor = "#EB5757";
-          isValid = false;
-        } else {
-          phoneInput.style.borderColor = "#E0E0E0";
-        }
+    phoneInput.addEventListener('input', function() {
+      if (phoneInput.value.trim()) {
+        phoneInput.classList.remove('error');
+        phoneError.classList.remove('visible');
+      }
+    });
 
-        // Validate checkbox
-        if (!isChecked) {
-          formCheckboxWrapper.style.borderColor = "#EB5757";
-          isValid = false;
-        } else {
-          formCheckboxWrapper.style.borderColor = "#181818";
-        }
-
-        if (isValid) {
-          // Form is valid, you can submit it here
-          alert("Форма успешно отправлена!");
-          feedbackForm.reset();
+    // Form submission
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nameValid = validateInput(nameInput, nameError, 'Пожалуйста, введите ваше имя');
+      const phoneValid = validateInput(phoneInput, phoneError, 'Пожалуйста, введите номер телефона');
+      
+      // Проверка чекбокса
+      if (!isChecked) {
+        checkboxWrapper.classList.add('error');
+      } else {
+        checkboxWrapper.classList.remove('error');
+      }
+      
+      if (nameValid && phoneValid && isChecked) {
+        // Simulate form submission (in a real app, you'd send data to a server here)
+        setTimeout(() => {
+          // Show success modal
+          successModal.classList.add('active');
+          
+          // Reset form
+          contactForm.reset();
+          nameInput.classList.remove('valid');
+          phoneInput.classList.remove('valid');
           isChecked = false;
-          formCheckbox.classList.remove("checked");
-        }
-      });
-    }
+          checkbox.classList.remove('checked');
+          checkboxWrapper.classList.remove('error');
+        }, 500);
+      }
+    });
+
+    // Close success modal
+    closeButton.addEventListener('click', function() {
+      successModal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside
+    successModal.addEventListener('click', function(e) {
+      if (e.target === successModal) {
+        successModal.classList.remove('active');
+      }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && successModal.classList.contains('active')) {
+        successModal.classList.remove('active');
+      }
+    });
 
     // Smooth Scrolling for Anchor Links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -898,33 +966,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle window resize events to maintain responsive layout
   let resizeTimer;
-  window.addEventListener("resize", function () {
+  window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
+    resizeTimer = setTimeout(function() {
       // Reinitialize sliders on significant width changes
       const newWidth = window.innerWidth;
       const wasLargeScreen = window.lastWidth >= 1441;
       const isLargeScreen = newWidth >= 1441;
       const wasExtraLargeScreen = window.lastWidth >= 1921;
       const isExtraLargeScreen = newWidth >= 1921;
+      const wasSmallScreen = window.lastWidth <= 576;
+      const isSmallScreen = newWidth <= 576;
 
       // Only reinitialize if crossing size thresholds
-      if (
-        wasLargeScreen !== isLargeScreen ||
-        wasExtraLargeScreen !== isExtraLargeScreen
-      ) {
-        console.log("Screen size threshold crossed, reinitializing sliders");
+      if (wasLargeScreen !== isLargeScreen || 
+          wasExtraLargeScreen !== isExtraLargeScreen || 
+          wasSmallScreen !== isSmallScreen) {
+        console.log('Screen size threshold crossed, reinitializing sliders');
         // Destroy and recreate sliders
         if (window.gallerySwiper) window.gallerySwiper.destroy(true, true);
         if (window.reviewsSwiper) window.reviewsSwiper.destroy(true, true);
-
+        
         // Reinitialize sliders
         initializeSliders();
+      } else {
+        // Just update sliders on regular resize
+        if (window.gallerySwiper) window.gallerySwiper.update();
+        if (window.reviewsSwiper) window.reviewsSwiper.update();
       }
-
+      
       // Update partners slider on any resize
       updatePartnersSlider();
-
+      
       // Store current width for next comparison
       window.lastWidth = newWidth;
     }, 250);

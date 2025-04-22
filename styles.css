@@ -533,13 +533,18 @@ p {
   will-change: transform;
   pointer-events: none; /* Запрещаем взаимодействие со слайдами */
   user-select: none; /* Запрещаем выделение текста */
+  transform-origin: center center;
+  box-sizing: border-box;
 }
 
 .swiper-slide-active {
+  opacity: 1;
+  z-index: 20;
 }
 
 .swiper-slide-prev,
 .swiper-slide-next {
+  opacity: 0.7;
 }
 
 #slide1,
@@ -1024,27 +1029,23 @@ p {
   border: 1px solid #181818;
   border-radius: 6px;
   cursor: pointer;
-  flex-shrink: 0;
-}
-
-.p-text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.h2-form {
-  font-weight: 800;
-  font-size: 28px;
-  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 20px;
 }
 
 .checkbox {
   width: 100%;
   height: 100%;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+}
+
+.checkbox.checked {
+  background-color: transparent;
 }
 
 .checkbox.checked::after {
@@ -1058,6 +1059,18 @@ p {
   border-bottom: 2px solid #181818;
   border-right: 2px solid #181818;
   margin-top: -2px;
+}
+
+.p-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.h2-form {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.5;
 }
 
 /* Эффект выделения формы при переходе с карточек */
@@ -1205,3 +1218,80 @@ p {
 }
 
 /* Media queries have been moved to media.css */
+
+/* Error messages and success modal */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.3s ease;
+}
+
+.error-message.visible {
+  visibility: visible;
+  height: auto;
+  margin-top: 5px;
+}
+
+.success-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-modal.active {
+  display: flex;
+}
+
+.success-modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.success-title {
+  color: #75C271;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Input validation styling */
+.form-group input.error {
+  border-color: #e74c3c;
+}
+
+.form-group input.valid {
+  border-color: #75C271;
+}
+
+.checkbox-wrapper.error {
+  border-color: #e74c3c;
+}

@@ -641,12 +641,14 @@
             Заполните форму, чтобы зарегистрироваться сейчас и начать свой
             языковой путь!
           </p>
-          <form>
+          <form id="contactForm">
             <div class="form-group">
-              <input type="text" placeholder="Ваше имя*" required />
+              <input type="text" id="name" placeholder="Ваше имя*" required />
+              <div class="error-message" id="name-error"></div>
             </div>
             <div class="form-group">
-              <input type="tel" placeholder="Номер телефона*" required />
+              <input type="tel" id="phone" placeholder="Номер телефона*" required />
+              <div class="error-message" id="phone-error"></div>
             </div>
             <button type="submit" class="form-button">Отправить</button>
           </form>
@@ -664,6 +666,18 @@
         </div>
       </div>
     </section>
+
+    <!-- Модальное окно успешной отправки -->
+    <div class="success-modal" id="successModal">
+      <div class="success-modal-content">
+        <div class="close-button">&times;</div>
+        <h2 class="success-title">Спасибо!</h2>
+        <p class="success-message">
+          Спасибо за вашу запись! Мы рады приветствовать вас на наших курсах по изучению казахского языка. 
+          В ближайшее время с вами свяжется наш специалист для уточнения деталей.
+        </p>
+      </div>
+    </div>
 
     <!-- 10. Карта -->
     <section class="map" id="contacts">
