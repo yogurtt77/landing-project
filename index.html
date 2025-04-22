@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlowLingo - Первая онлайн школа казахского языка</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,6 +46,11 @@
             <div class="language">
               <span>RU</span>
               <img src="assets/icons/arrow-down.svg" alt="Language selector" />
+              <div class="language-dropdown">
+                <a href="#" class="language-option">RU</a>
+                <a href="#" class="language-option">KZ</a>
+                <a href="#" class="language-option">EN</a>
+              </div>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
               <span></span>
@@ -53,15 +59,36 @@
             </button>
           </div>
         </header>
+        <div class="slider">
+          <img
+            src="assets/images/backgrounds/bg-image.png"
+            class="slide active"
+            data-title="Первая онлайн школа казахского языка"
+            data-description="Предоставляем уникальные и современные методы обучения, которые помогут вам овладеть казахским языком с уверенностью и легкостью."
+          />
+          <img
+            src="assets/images/backgrounds/bg-image.png"
+            class="slide"
+            data-title="Изучайте казахский язык онлайн"
+            data-description="Обучайтесь в любое удобное время с профессиональными преподавателями и интерактивной методикой."
+          />
+          <img
+            src="assets/images/backgrounds/bg-image.png"
+            class="slide"
+            data-title="Инновационные методы обучения"
+            data-description="Наша методика Flow позволяет освоить казахский язык в короткие сроки с максимальной эффективностью."
+          />
+        </div>
 
         <!-- Main hero content -->
         <div class="hero-content">
-          <h1>Первая онлайн школа казахского языка</h1>
-          <p class="hero-content-p">
+          <h1 id="slide-title">Первая онлайн школа казахского языка</h1>
+          <p class="hero-content-p" id="slide-description">
             Предоставляем уникальные и современные методы обучения, которые
             помогут вам овладеть казахским языком с уверенностью и легкостью.
           </p>
-          <button class="btn-primary">Записаться</button>
+          <!-- <button class="btn-primary">Записаться</button> -->
+          <a href="#feedback" class="btn-primary">Записаться</a>
           <div class="arrows">
             <div class="arrow-left">
               <img src="assets/icons/arrow-left.svg" alt="Previous slide" />
@@ -112,7 +139,7 @@
               путь к успеху и культурному обогащению через изучение казахского
               языка онлайн!
             </p>
-            <button class="btn-primary-2">Записаться</button>
+            <a class="btn-primary" href="#feedback"> Записаться </a>
           </div>
         </div>
       </div>
@@ -143,18 +170,6 @@
           </div>
           <div class="advantage-card">
             <div class="advantage-icon">
-              <img src="assets/icons/Vector2.svg" alt="Professional teachers" />
-            </div>
-            <div class="advantage-content">
-              <h3>Профессиональные педагоги</h3>
-              <p>
-                Получайте поддержку и руководство от опытных преподавателей,
-                отличающихся экспертизой в преподавании казахского языка.
-              </p>
-            </div>
-          </div>
-          <div class="advantage-card">
-            <div class="advantage-icon">
               <img
                 src="assets/icons/Vector3.svg"
                 alt="Feedback and evaluation"
@@ -166,6 +181,18 @@
                 Получайте детальную обратную связь и персонализированную оценку
                 вашего прогресса, что поможет вам продвигаться быстрее и
                 эффективнее в изучении казахского языка.
+              </p>
+            </div>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <img src="assets/icons/Vector2.svg" alt="Professional teachers" />
+            </div>
+            <div class="advantage-content">
+              <h3>Профессиональные педагоги</h3>
+              <p>
+                Получайте поддержку и руководство от опытных преподавателей,
+                отличающихся экспертизой в преподавании казахского языка.
               </p>
             </div>
           </div>
@@ -186,13 +213,24 @@
 
         <div class="swiper gallery-swiper">
           <div class="swiper-wrapper">
+            <!-- Original slides -->
             <div class="swiper-slide" id="slide1"></div>
             <div class="swiper-slide" id="slide2"></div>
             <div class="swiper-slide" id="slide3"></div>
-            <!-- Добавляем дублирующие слайды для лучшей загрузки в цикле -->
+            <!-- Additional duplicate slides for smoother loop -->
             <div class="swiper-slide" id="slide1-clone"></div>
             <div class="swiper-slide" id="slide2-clone"></div>
             <div class="swiper-slide" id="slide3-clone"></div>
+            <div class="swiper-slide" id="slide1-clone2"></div>
+            <div class="swiper-slide" id="slide2-clone2"></div>
+            <div class="swiper-slide" id="slide3-clone2"></div>
+            <!-- Extra duplicates for ultra-smooth looping -->
+            <div class="swiper-slide" id="slide1-clone3"></div>
+            <div class="swiper-slide" id="slide2-clone3"></div>
+            <div class="swiper-slide" id="slide3-clone3"></div>
+            <div class="swiper-slide" id="slide1-clone4"></div>
+            <div class="swiper-slide" id="slide2-clone4"></div>
+            <div class="swiper-slide" id="slide3-clone4"></div>
           </div>
         </div>
         <div class="gallery-arrow-left">
@@ -291,6 +329,15 @@
                 <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
               </div>
             </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Мы предлагаем все уровни изучения казахского языка: от
+                начального (A1) до продвинутого (C1). Наши программы
+                структурированы так, чтобы обеспечить плавный переход между
+                уровнями и постоянное развитие языковых навыков.
+              </p>
+            </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
@@ -298,6 +345,15 @@
               <div class="faq-arrow">
                 <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
               </div>
+            </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Длительность курсов варьируется в зависимости от выбранной
+                программы и уровня. Стандартные курсы длятся 2-3 месяца с
+                занятиями 2-3 раза в неделю, но у нас также есть интенсивные
+                программы и индивидуальные графики обучения.
+              </p>
             </div>
           </div>
           <div class="faq-item">
@@ -307,6 +363,16 @@
                 <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
               </div>
             </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Мы используем коммуникативный подход с элементами погружения в
+                языковую среду. Наша уникальная методика "Казахский Flow"
+                сочетает интерактивные упражнения, разговорную практику, игровые
+                элементы и культурное погружение для максимальной эффективности
+                обучения.
+              </p>
+            </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
@@ -314,6 +380,15 @@
               <div class="faq-arrow">
                 <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
               </div>
+            </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Да, по окончании каждого уровня обучения мы выдаем сертификат,
+                подтверждающий ваши знания и навыки. Наши сертификаты признаются
+                многими организациями и могут быть полезны для трудоустройства
+                или учебы.
+              </p>
             </div>
           </div>
           <div class="faq-item">
@@ -325,6 +400,15 @@
               <div class="faq-arrow">
                 <img src="assets/icons/arrow-down.svg" alt="Toggle FAQ" />
               </div>
+            </div>
+            <div class="faq-divider"></div>
+            <div class="faq-answer">
+              <p>
+                Мы организуем регулярные разговорные клубы, языковые обмены с
+                носителями языка, онлайн-дискуссии и тематические встречи. Кроме
+                того, студенты получают доступ к нашему сообществу, где могут
+                практиковать казахский язык в непринужденной обстановке.
+              </p>
             </div>
           </div>
         </div>
@@ -396,83 +480,149 @@
 
     <!-- 08. Отзывы -->
     <section class="reviews" id="reviews">
-      <div class="container">
-        <div class="section-header center">
-          <span class="section-label">отзывы</span>
-          <h2>Отзывы клиентов</h2>
+      <div class="section-header center">
+        <span class="section-label">отзывы</span>
+        <h2>Отзывы клиентов</h2>
+      </div>
+      <div class="reviews-container">
+        <div class="swiper reviews-swiper">
+          <div class="swiper-wrapper">
+            <!-- Original review cards -->
+            <div class="swiper-slide" id="review1">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review2">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review3">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review4">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review5">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for smoother infinite loop -->
+            <div class="swiper-slide" id="review1-clone">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review2-clone">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+            <div class="swiper-slide" id="review3-clone">
+              <div class="review-card">
+                <div class="quote-icon">
+                  <img src="assets/icons/quote.svg" alt="Quote" />
+                </div>
+                <p class="review-text">
+                  Я всегда хотела изучить казахский язык, чтобы лучше понимать
+                  культуру моего мужа. Занятия в этой школе превзошли мои
+                  ожидания! Преподаватели внимательно относятся к каждому
+                  студенту, и занятия были интересными и практичными. Теперь я
+                  горжусь своим прогрессом в изучении казахского языка и могу
+                  свободно общаться с родственниками мужа
+                </p>
+                <p class="review-author">Анастасия П., 29 лет</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="reviews-slider">
-        <!-- Original review cards - the clones will be added by JavaScript -->
-        <div class="review-card">
-          <div class="quote-icon">
-            <img src="assets/icons/quote.svg" alt="Quote" />
-          </div>
-          <p class="review-text">
-            Я начала изучение казахского языка с нуля и долго искала подходящую
-            школу. Очень рада, что выбрала именно эту! Преподаватели терпеливо
-            объясняют материал, и даже сложные темы становятся понятными.
-            Постепенно я стала чувствовать себя увереннее в разговоре на
-            казахском языке, и теперь с удовольствием общаюсь с местными
-            жителями
-          </p>
-          <p class="review-author">Анастасия П., 29 лет</p>
-        </div>
-        <div class="review-card">
-          <div class="quote-icon">
-            <img src="assets/icons/quote.svg" alt="Quote" />
-          </div>
-          <p class="review-text">
-            Приезжая в Казахстан на рабочие командировки, я решил освоить
-            казахский язык для улучшения деловых связей. Курсы в этой школе дали
-            мне уверенность и необходимые навыки для общения с местными
-            партнерами. Опытные преподаватели помогли мне научиться использовать
-            язык в рабочих и неформальных ситуациях
-          </p>
-          <p class="review-author">Алексей К., 34 года</p>
-        </div>
-        <div class="review-card active">
-          <div class="quote-icon">
-            <img src="assets/icons/quote.svg" alt="Quote" />
-          </div>
-          <p class="review-text">
-            Я всегда хотела изучить казахский язык, чтобы лучше понимать
-            культуру моего мужа. Занятия в этой школе превзошли мои ожидания!
-            Преподаватели внимательно относятся к каждому студенту, и занятия
-            были интересными и практичными. Теперь я горжусь своим прогрессом в
-            изучении казахского языка и могу свободно общаться с родственниками
-            мужа
-          </p>
-          <p class="review-author">Анастасия П., 29 лет</p>
-        </div>
-        <div class="review-card">
-          <div class="quote-icon">
-            <img src="assets/icons/quote.svg" alt="Quote" />
-          </div>
-          <p class="review-text">
-            Изучение казахского языка стало для меня интересным и увлекательным
-            процессом. Курс обладает отличным балансом между теорией и
-            практикой, что позволяет применять новые знания на практике. Студии
-            школы всегда были дружелюбны и поддерживающими, что создает приятную
-            атмосферу во время занятий
-          </p>
-          <p class="review-author">Дмитрий Г., 40 лет</p>
-        </div>
-        <div class="review-card">
-          <div class="quote-icon">
-            <img src="assets/icons/quote.svg" alt="Quote" />
-          </div>
-          <p class="review-text">
-            Я училась в этой школе перед переездом в Казахстан для работы.
-            Занятия помогли мне быстро освоить основы языка и легко
-            адаптироваться в новой стране. Возможность учиться онлайн была
-            идеальным решением для меня, так как я могла заниматься из любой
-            точки мира. Большое спасибо за поддержку и отличный опыт обучения
-          </p>
-          <p class="review-author">Наталья С., 26 лет</p>
-        </div>
-      </div>
-      <div class="review-arrows">
+
+      <div class="review-navigation">
         <div class="review-arrow-left">
           <img src="assets/icons/arrow-right1.svg" alt="Previous review" />
         </div>

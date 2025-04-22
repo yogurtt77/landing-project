@@ -1,0 +1,762 @@
+/* Media Queries */
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .about,
+  .advantages,
+  .gallery,
+  .services,
+  .faq,
+  .partners {
+    margin-bottom: 200px;
+  }
+
+  .reviews {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    max-width: 1650px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p,
+  .section-label,
+  .section-label-2 {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 50px 0 195px 0;
+  }
+
+  .hero-content-p {
+    min-width: 560px;
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    padding: 20px 80px;
+  }
+
+  .btn-primary-2 {
+    padding: 20px 80px;
+  }
+
+  .header {
+    padding: 35px 70px;
+    margin-bottom: 160px;
+  }
+
+  .menu ul li a {
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .menu ul {
+    gap: 70px;
+  }
+
+  .language {
+    gap: 16px;
+  }
+
+  .language span {
+    font-size: 20px;
+  }
+
+  .arrows {
+    gap: 20px;
+  }
+
+  .arrow-left img,
+  .arrow-right img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about-image {
+    width: 644.4251708984375px;
+    height: 672.3502197265625px;
+  }
+
+  .about-text {
+    max-width: 840px;
+  }
+
+  .gallery-arrow-left {
+    left: 60px;
+  }
+
+  .gallery-arrow-right {
+    right: 60px;
+  }
+
+  .gallery-arrow-left img,
+  .gallery-arrow-right img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .advantage-card {
+    width: 530px;
+  }
+
+  .advantage-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery-container {
+    height: 550px;
+  }
+
+  .faq-list {
+    max-width: 1650px;
+  }
+
+  .faq-question {
+    padding: 40px 50px;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 40px 50px !important;
+  }
+
+  .faq-question h3 {
+    font-size: 24px;
+  }
+
+  .swiper-slide {
+    width: 810px !important;
+  }
+
+  .card {
+    width: 530px;
+    height: 530px;
+  }
+
+  .card-text h3 {
+    font-size: 24px;
+  }
+
+  .card-text p {
+    font-size: 18px;
+  }
+
+  .reviews-swiper .swiper-slide {
+    width: 453px !important;
+    height: 672px !important;
+  }
+
+  .review-card {
+    width: 453px;
+    height: 672px;
+    padding: 50px !important;
+  }
+
+  .quote-icon img {
+    width: 67.5px;
+    height: 46.58699417114258px;
+  }
+
+  .review-navigation {
+    margin-top: 50px;
+    gap: 30px;
+  }
+
+  .review-arrow-left,
+  .review-arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback-form {
+    max-width: 590px;
+    padding: 100px 50px;
+  }
+
+  .feedback-form h2 {
+    font-size: 40px;
+  }
+
+  .feedback-form p {
+    font-size: 20px;
+  }
+
+  .checkbox-wrapper {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Optimize images for large screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Map section for larger screens */
+  .map {
+    height: 650px;
+  }
+
+  .footer {
+    padding: 100px 0 50px 0;
+  }
+
+  .footer-top {
+    margin-bottom: 100px;
+  }
+
+  .footer-divider {
+    margin-bottom: 50px;
+  }
+
+  .footer-menu-column {
+    gap: 25px;
+  }
+
+  .footer-menu-column a {
+    font-size: 20px;
+  }
+
+  .fixed-button {
+    width: 85px;
+    height: 85px;
+    bottom: 65px;
+  }
+
+  .fixed-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-icon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-item span {
+    font-size: 20px;
+  }
+
+  /* Partner logos for larger screens */
+  .partner-logo img {
+    max-width: 216.67px;
+    max-height: 150px;
+  }
+
+  .card-button {
+    padding: 20px 80px;
+    font-size: 20px;
+    left: 33%;
+    transform: translateX(-50%) translateY(50px);
+  }
+
+  .card:hover .card-button {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .advantages-cards,
+  .services-card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .swiper-slide {
+    width: 500px !important;
+  }
+
+  .reviews-slider {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .header {
+    padding: 20px 30px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(107, 83, 246, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu ul li a {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .menu ul li a:hover {
+    color: #f17e4e;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+  }
+
+  .advantage-card,
+  .card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .hero-content {
+    gap: 30px;
+  }
+
+  .feedback {
+    padding: 100px 0 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .menu.active {
+    padding-top: 80px;
+  }
+
+  .menu ul li a {
+    font-size: 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-menu {
+    gap: 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .swiper-slide {
+    width: 85% !important;
+  }
+
+  .gallery-container {
+    height: 300px;
+  }
+
+  .gallery-gradient {
+    width: 15%;
+  }
+
+  .gallery-arrow-left {
+    left: 3%;
+  }
+
+  .gallery-arrow-right {
+    right: 3%;
+  }
+
+  .services-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+  }
+
+  .card-text {
+    padding: 25px 15px 40px;
+  }
+
+  .card-text h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .card-text p {
+    font-size: 13px;
+  }
+
+  .card-button {
+    padding: 10px 30px;
+    font-size: 14px;
+    left: 50%;
+  }
+
+  .card:hover .card-text {
+    padding-bottom: 60px;
+  }
+
+  .faq-question h3 {
+    font-size: 14px;
+  }
+
+  .reviews {
+    margin-bottom: 40px;
+  }
+
+  .review-card {
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+    padding: 35px !important;
+  }
+
+  .feedback-form {
+    max-width: 90%;
+    padding: 35px 25px;
+  }
+
+  .form-group input {
+    padding: 15px 20px;
+  }
+
+  .h2-form {
+    font-size: 24px;
+  }
+
+  .btn-primary,
+  .form-button {
+    padding: 12px 40px;
+  }
+
+  .language-dropdown {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 80px;
+  }
+
+  .reviews-swiper .swiper-slide {
+    width: 90% !important;
+    height: auto !important;
+    min-height: 420px;
+  }
+
+  .review-arrow-left,
+  .review-arrow-right {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 30px 0 60px;
+  }
+
+  .hero-content {
+    gap: 20px;
+  }
+
+  .about,
+  .advantages,
+  .gallery,
+  .services,
+  .faq,
+  .partners,
+  .reviews {
+    margin-bottom: 60px;
+  }
+
+  .about {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .gallery-container {
+    height: 250px;
+  }
+
+  .faq-question {
+    padding: 20px 30px;
+  }
+
+  .faq-answer {
+    padding: 0 30px !important;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 30px !important;
+  }
+
+  .review-card {
+    width: 100%;
+    padding: 30px !important;
+    gap: 20px;
+    min-height: 420px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-social {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .footer-contacts {
+    width: 100%;
+  }
+
+  .fixed-button {
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 15px;
+  }
+
+  .feedback {
+    padding: 80px 0 60px;
+  }
+
+  .reviews-swiper .swiper-slide {
+    width: 85% !important;
+    height: auto !important;
+    min-height: 420px;
+  }
+
+  .review-navigation {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 40px;
+    padding: 12px 15px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .header-right {
+    gap: 15px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .language {
+    font-size: 13px;
+  }
+
+  .mobile-menu-toggle {
+    width: 24px;
+    height: 20px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+  }
+
+  .mobile-menu-toggle span:nth-child(2) {
+    top: 8px;
+  }
+
+  .mobile-menu-toggle span:nth-child(3) {
+    top: 16px;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1),
+  .mobile-menu-toggle.active span:nth-child(3) {
+    top: 8px;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+  }
+
+  .gallery-arrow-left img,
+  .gallery-arrow-right img,
+  .review-arrow-left img,
+  .review-arrow-right img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .gallery-container {
+    height: 200px;
+  }
+
+  .swiper-slide {
+    width: 90% !important;
+  }
+
+  .advantage-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .advantage-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .advantage-card {
+    padding: 0 10px;
+  }
+
+  .form-group input {
+    padding: 12px 15px;
+  }
+
+  .form-agreement {
+    gap: 10px;
+  }
+
+  .p-text {
+    font-size: 12px;
+  }
+
+  .language-dropdown {
+    min-width: 70px;
+    padding: 5px 0;
+  }
+
+  .language-option {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .reviews-swiper .swiper-slide {
+    width: 90% !important;
+    height: auto !important;
+    min-height: 400px;
+  }
+
+  .review-card {
+    padding: 25px !important;
+    gap: 15px;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .review-arrow-left,
+  .review-arrow-right {
+    width: 28px;
+    height: 28px;
+  }
+}
